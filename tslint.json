@@ -1,0 +1,34 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-airbnb",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "curly": false,
+        "import-name": false,
+        "interface-name": false,
+        "interface-over-type-literal": false,
+        "jsx-boolean-value": false,
+        "jsx-no-lambda": false,
+        "member-access": false,
+        "no-empty": false,
+        "no-unused-expression": false,
+        "no-var-requires": false,
+        "object-literal-sort-keys": false,
+        "object-shorthand-properties-first": false,
+        "ordered-imports": false,
+        "prefer-array-literal": false,
+        "radix": false,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-pascal-case"
+        ]
+    },
+    "rulesDirectory": []
+}

@@ -1,0 +1,48 @@
+{
+    "name": "src",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "now-build": "tsc --project tsconfig.json",
+        "dev": "nodemon src/server.ts",
+        "build": "tsc --project tsconfig.json",
+        "release": "tsc --project tsconfig.json && now",
+        "lint": "tslint **/*.{ts,tsx}",
+        "prettier": "prettier **/*.{ts,tsx} --write --single-quote",
+        "lint-staged": "lint-staged"
+    },
+    "pre-commit": "lint-staged",
+    "lint-staged": {
+        "*.js": [
+            "prettier --write --single-quote",
+            "git add"
+        ]
+    },
+    "dependencies": {
+        "@types/node": "^10.12.23",
+        "class-transformer": "^0.2.0",
+        "class-validator": "^0.9.1",
+        "graphql": "^14.1.1",
+        "graphql-type-json": "^0.2.1",
+        "graphql-yoga": "^1.17.0",
+        "mongodb": "^3.1.13",
+        "ramda": "^0.26.1",
+        "reflect-metadata": "^0.1.13",
+        "type-graphql": "^0.16.0",
+        "typeorm": "^0.2.12"
+    },
+    "devDependencies": {
+        "@types/ramda": "^0.25.48",
+        "lint-staged": "^8.1.0",
+        "nodemon": "^1.18.9",
+        "pre-commit": "^1.2.2",
+        "prettier": "^1.16.0",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.12.1",
+        "tslint-config-airbnb": "^5.11.1",
+        "tslint-config-prettier": "^1.17.0",
+        "tslint-react": "^3.6.0",
+        "typescript": "^3.2.4"
+    }
+}
