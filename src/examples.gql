@@ -1,0 +1,19 @@
+query GetProfiles {
+    profiles {
+        name
+        description
+    }
+    profile(name: "Profile 1") {
+        name
+        description
+    }
+}
+
+mutation AddProfile {
+    addProfile(
+        profile: { name: "New recipe", description: "Simple description" }
+    ) {
+        created
+        name
+    }
+}
